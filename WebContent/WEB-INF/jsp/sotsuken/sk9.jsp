@@ -70,11 +70,19 @@
 			</table>
 	<%
 		}
+		
+		if(count<task_name.size()){
+			while(count<task_name.size()){
+	%>
+				<h2><%= task_name.get(count)%></h2>
+				<h3>この作業の報告は現在上がっていません</h3>
+	<%
+				count++;
+			}
+		}
 	%>
 		
-		<table border="1">
-			
-		</table>
+		
 		</form>
 	<%
 		}
