@@ -35,13 +35,13 @@
 				<h2><%= task_name.get(count)%></h2>
 				<h3>この作業の報告は現在上がっていません</h3>
 	<%
-				if(count<task_name.size()-1){
-					count++;
-				}
+				
+				count++;
+				
 			}else{
-				if(count<task_name.size()-1){
-					count++;
-				}
+				
+				count++;
+				
 				break;
 			}
 			}
