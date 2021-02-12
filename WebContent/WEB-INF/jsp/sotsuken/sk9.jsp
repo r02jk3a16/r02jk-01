@@ -36,11 +36,11 @@
 				<h3>この作業の報告は現在上がっていません</h3>
 	<%
 				
-					count++;
+				count++;
 				
 			}else{
 				
-					count++;
+				count++;
 				
 				break;
 			}
