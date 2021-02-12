@@ -19,11 +19,11 @@
 <H1><span>登録したいユーザー名を入力して下さい</span></H1>
 
 <h2>ユーザー名</h2>
+<div>
 </br><input type="text" name="name" class="textbox"/>
 <input type="hidden" name="email" value=<%=user_mail%> />
-
-</br></br><input type="submit" value="登録" class="btn-submit">
-
+<input type="submit" value="登録" class="btn-submit">
+</div>
 </form>
 
 

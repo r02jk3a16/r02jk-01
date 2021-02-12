@@ -11,7 +11,7 @@
 <body>
 <H1><span>It Works!</span></H1>
 <H2>画面</H2>
-<p>認証して画面1へ<a href="/USER3">/USER3-/Sotuken1</a></p>
+<p>認証して画面1へ<a href="/mail">/USER3-/Sotuken1</a></p>
 <p>課題登録画面<a href="/Sotuken3">/Sotuken4</a></p>
 <p>画面5<a href="/sk5_1">/sk5_1</a></p>
 <p>画面8<a href="/sk8">/sk8</a></p>
