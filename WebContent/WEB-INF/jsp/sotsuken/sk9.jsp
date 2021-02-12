@@ -71,6 +71,12 @@
 	<%
 		}
 		
+		
+	%>
+		
+		
+		</form>
+	<%
 		if(count<task_name.size()){
 			while(count<task_name.size()){
 	%>
@@ -80,11 +86,6 @@
 				count++;
 			}
 		}
-	%>
-		
-		
-		</form>
-	<%
 		}
 	%>
 </body>
