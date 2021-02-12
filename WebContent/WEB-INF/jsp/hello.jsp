@@ -14,12 +14,12 @@
 <%String user_name = (String)request.getSession().getAttribute("name"); %>
 <H1><span>ようこそ<%=user_name %>さん</span></H1>
 <H2>あなたのIDは<%=user_id %>です</H2>
-
+<div>
 <form method="get" action="./Sotuken1">
 <input type="hidden" name=userid value<%=user_id %>>
 <input type="submit" value="はじめる" class="btn-submit">
 </form>
-
+</div>
 
 </body>
 </html>

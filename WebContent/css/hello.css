@@ -26,6 +26,7 @@ h2 {
   position: relative;
   padding: .5em .75em;
   background-color: #e8e8e8;
+  text-align:center;
 }
 h2::after {
   content: '';
@@ -69,4 +70,10 @@ h2::after {
   background-image: none
   background-color: #ddd;
   font-size: 16px;
+}
+
+div{
+	margin-top :5px;
+	text-align:center;
+}
 }

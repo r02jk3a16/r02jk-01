@@ -17,11 +17,12 @@
 <H1><span>メールアドレスを入力して下さい</span></H1>
 
 <h2>メールアドレス</h2>
+<div>
 </br><input type="text" name="email" class="textbox"/>
-
-</br></br><input type="submit" value="確認" class="btn-submit">
-
+<input type="submit" value="確認" class="btn-submit">
+</div>
 </form>
+
 
 
 </body>
