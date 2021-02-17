@@ -13,6 +13,7 @@
 		String pro_id = (String)request.getAttribute("pro_id");
 		List<String[]> resultList = (List<String[]>) request.getSession().getAttribute("resultList");
 		List<String> task_name = (List<String>) request.getAttribute("task_name");
+		 int flag = 0;
 	%>
 	<h1><%=pro_name%></h1>
 	<%
@@ -29,6 +30,16 @@
 		int count = 0;
 		int index = 0;
 		label:for(int i=0;i<resultList.size();i++){
+			if(flag==1&&count<task_name.size()){
+				while(count<task_name.size()){
+		%>
+					<p><b><%= task_name.get(count)%></b></p>
+					<p>この作業の報告は現在上がっていません</p>
+		<%
+					count++;
+				}
+				break label;
+			}
 			for(int c=0;c<task_name.size();c++){
 			if(!resultList.get(index)[1].equals(task_name.get(count))){
 	%>
@@ -46,7 +57,7 @@
 			}
 			}
 	%>
-			<p><%= resultList.get(index)[1]%></p>
+			<p><b><%= resultList.get(index)[1]%></b></p>
 			<table>
 	<% 		
 			for(int j=0;j<resultList.size();j++){
@@ -62,7 +73,8 @@
 						break;
 					}
 				}else{
-					break label;
+					flag=1;
+					break;
 				}
 			}
 			
@@ -77,15 +89,6 @@
 		
 		</form>
 	<%
-		if(count<task_name.size()){
-			while(count<task_name.size()){
-	%>
-				<p><b><%= task_name.get(count)%></b></p>
-				<p>この作業の報告は現在上がっていません</p>
-	<%
-				count++;
-			}
-		}
 		}
 	%>
 </body>
