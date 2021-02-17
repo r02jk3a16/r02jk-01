@@ -26,67 +26,39 @@
 		
 		
 		<form action="./sk10" method="post">
-	<% 
-		int count = 0;
+	<%
 		int index = 0;
-		label:for(int i=0;i<resultList.size();i++){
-			if(flag==1&&count<task_name.size()){
-				while(count<task_name.size()){
-		%>
-					<p><b><%= task_name.get(count)%></b></p>
-					<p>この作業の報告は現在上がっていません</p>
-		<%
-					count++;
-				}
-				break label;
-			}
-			for(int c=0;c<task_name.size();c++){
-			if(!resultList.get(index)[1].equals(task_name.get(count))){
+		for(int i=0;i<task_name.size();i++){
 	%>
-				<p><b><%= task_name.get(count)%></b></p>
+			<p><b><%= task_name.get(i)%></b></p>
+	<%
+			if(!resultList.get(index)[1].equals(task_name.get(i))){
+	%>
 				<p>この作業の報告は現在上がっていません</p>
 	<%
-				
-				count++;
-				
 			}else{
-				
-				count++;
-				
-				break;
-			}
-			}
 	%>
-			<p><b><%= resultList.get(index)[1]%></b></p>
-			<table>
-	<% 		
-			for(int j=0;j<resultList.size();j++){
-				String[] repo = resultList.get(index);
-	%>
-				<tr><td><%=repo[3] %></td><td><%=repo[4] %></td>
-				<td><button type="submit" name="repode<%=i %>" value="<%= repo[4]%>">詳細へ</button></td></tr>
+				<table>
 	<%
-				
-				if(index+1<resultList.size()){
-					index++;
-					if(!repo[0].equals(resultList.get(index)[0])){
+				while(resultList.get(index)[1].equals(task_name.get(i))){
+					String[] repo = resultList.get(index);
+					%>
+							<tr><td><%=repo[3] %></td><td><%=repo[4] %></td>
+							<td><button type="submit" name="repode<%=i %>" value="<%= repo[4]%>">詳細へ</button></td></tr>
+					<%
+					if(index+1<resultList.size()){
+						index+=1;
+					}else{
 						break;
 					}
-				}else{
-					flag=1;
-					break;
 				}
+	%>
+				</table>
+	<%
 			}
 			
-	%>
-			</table>
-	<%
 		}
-		
-		
 	%>
-		
-		
 		</form>
 	<%
 		}
