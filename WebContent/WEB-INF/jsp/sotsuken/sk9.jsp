@@ -32,8 +32,8 @@
 			for(int c=0;c<task_name.size();c++){
 			if(!resultList.get(index)[1].equals(task_name.get(count))){
 	%>
-				<h2><%= task_name.get(count)%></h2>
-				<h3>この作業の報告は現在上がっていません</h3>
+				<p><b><%= task_name.get(count)%></b></p>
+				<p>この作業の報告は現在上がっていません</p>
 	<%
 				
 				count++;
@@ -46,7 +46,7 @@
 			}
 			}
 	%>
-			<h2><%= resultList.get(index)[1]%></h2>
+			<p><%= resultList.get(index)[1]%></p>
 			<table>
 	<% 		
 			for(int j=0;j<resultList.size();j++){
@@ -80,8 +80,8 @@
 		if(count<task_name.size()){
 			while(count<task_name.size()){
 	%>
-				<h2><%= task_name.get(count)%></h2>
-				<h3>この作業の報告は現在上がっていません</h3>
+				<p><b><%= task_name.get(count)%></b></p>
+				<p>この作業の報告は現在上がっていません</p>
 	<%
 				count++;
 			}
